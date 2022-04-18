@@ -2,6 +2,10 @@
 /* 全体 */
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400&family=Rubik:wght@400;600&family=Shippori+Antique&display=swap');
 
+.disabled-link {
+  pointer-events: none;
+}
+
 /* Background */
 /* Title */
 /* Menubar */
@@ -17,6 +21,33 @@
 
 /* Main Container */
 /* Animation */
+
+/* React Transition Group */
+
+.fade-enter {
+  opacity: 0;
+  transform: translate(0, 10px);
+  z-index: 1;
+}
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transform: translate(0, 0);
+
+  transition: opacity 300ms ease-out, transform 300ms ease;
+}
+.fade-exit {
+  opacity: 1;
+  transform: translate(0, 0);
+  z-index: 0;
+}
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transform: translate(0, 10px);
+
+  transition: opacity 300ms ease-out, transform 300ms ease;
+}
+
+
 /* ---------------------------------------------------------------- */
 
 :root {
