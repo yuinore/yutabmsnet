@@ -24,6 +24,9 @@ module.exports = {
     open: true,
     stats: 'errors-warnings',
     hot: true,
+
+    // SPA Routing Setting
+    historyApiFallback: { index: "/", disableDotRule: true },
   },
   optimization: {
     splitChunks: {
