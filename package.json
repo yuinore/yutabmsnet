@@ -9,8 +9,8 @@
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src/",
     "postbuild": "react-snap"
   },
-  "reactSnap" : {
-   "source" : "./dist"
+  "reactSnap": {
+    "source": "./dist"
   },
   "devDependencies": {
     "@marshallofsound/webpack-asset-relocator-loader": "^0.5.0",
@@ -46,6 +46,7 @@
     "@types/react-transition-group": "^4.4.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
     "react-router-dom": "^6.3.0",
     "react-transition-group": "^4.4.2"
   }
