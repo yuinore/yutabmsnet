@@ -7,7 +7,7 @@
     "start": "cross-env NODE_ENV=development webpack serve --config tools/webpack/webpack.config.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config tools/webpack/webpack.config.prod.js",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src/",
-    "postbuild": "react-snap"
+    "postbuild": "react-snap ; cp -R assets/ dist/"
   },
   "reactSnap": {
     "source": "./dist"
