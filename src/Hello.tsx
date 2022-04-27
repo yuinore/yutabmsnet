@@ -121,7 +121,7 @@ function MainPage(): JSX.Element {
                     <h2>What's new?</h2>
                     <h3>2022/04/28</h3>
                     <p>サイトを公開しました。</p>
-                    <Footer />
+                    <Footer title="Yu^ta's Laboratory" />
                   </div>
                 } />
 
@@ -133,7 +133,7 @@ function MainPage(): JSX.Element {
                     <p>Composer / BMS Creator / Track Maker / Arranger / Since 2009</p>
                     <p>Twitter: <a href="https://twitter.com/yutaortslabo" target="_blank">@yutaortslabo</a></p>
                     <p>YouTube Channel: <a href="https://www.youtube.com/channel/UCFDLlgwG9hmIYqfKafUepzQ" target="_blank">https://www.youtube.com/channel/UCFDLlgwG9hmIYqfKafUepzQ</a></p>
-                    <Footer />
+                    <Footer title="About | Yu^ta's Laboratory" />
                   </div>
                 } />
 
@@ -229,7 +229,7 @@ function MainPage(): JSX.Element {
                         特設サイト <a href="http://strawberry-mint-chocolate.com/" target="_blank">http://strawberry-mint-chocolate.com/</a><br />
                       </p>
                     </div>
-                    <Footer />
+                    <Footer title="CDs | Yu^ta's Laboratory" />
                   </div>
                 } />
 
@@ -249,7 +249,7 @@ function MainPage(): JSX.Element {
                         <a href="https://famousbms.web.fc2.com/" target="_blank">第λ回 自称超有名BMS作家が物申す！</a>
                       </li>
                     </ul>
-                    <Footer />
+                    <Footer title="BMS | Yu^ta's Laboratory" />
                   </div>
                 } />
 
