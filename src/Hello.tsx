@@ -10,6 +10,7 @@ import {
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import { Helmet } from "react-helmet";
 import "./Hello.css"
+import Footer from "./Footer"
 
 function Hello(): JSX.Element {
   return (
@@ -120,6 +121,7 @@ function MainPage(): JSX.Element {
                     <h2>What's new?</h2>
                     <h3>2022/04/28</h3>
                     <p>サイトを公開しました。</p>
+                    <Footer />
                   </div>
                 } />
 
@@ -127,11 +129,11 @@ function MainPage(): JSX.Element {
                   <div className="routing-container routing-container-root">
                     <h2>About</h2>
                     <h3>Yu^ta</h3>
-                      <img src="/assets/images/logo.png" className="profile-avatar" />
-                      <p>Composer / BMS Creator / Track Maker / Arranger / Since 2009</p>
-                      <p>Twitter: <a href="https://twitter.com/yutaortslabo" target="_blank">@yutaortslabo</a></p>
-                      <p>YouTube Channel: <a href="https://www.youtube.com/channel/UCFDLlgwG9hmIYqfKafUepzQ" target="_blank">https://www.youtube.com/channel/UCFDLlgwG9hmIYqfKafUepzQ</a></p>
-
+                    <img src="/assets/images/logo.png" className="profile-avatar" />
+                    <p>Composer / BMS Creator / Track Maker / Arranger / Since 2009</p>
+                    <p>Twitter: <a href="https://twitter.com/yutaortslabo" target="_blank">@yutaortslabo</a></p>
+                    <p>YouTube Channel: <a href="https://www.youtube.com/channel/UCFDLlgwG9hmIYqfKafUepzQ" target="_blank">https://www.youtube.com/channel/UCFDLlgwG9hmIYqfKafUepzQ</a></p>
+                    <Footer />
                   </div>
                 } />
 
@@ -227,6 +229,7 @@ function MainPage(): JSX.Element {
                         特設サイト <a href="http://strawberry-mint-chocolate.com/" target="_blank">http://strawberry-mint-chocolate.com/</a><br />
                       </p>
                     </div>
+                    <Footer />
                   </div>
                 } />
 
@@ -246,6 +249,7 @@ function MainPage(): JSX.Element {
                         <a href="https://famousbms.web.fc2.com/" target="_blank">第λ回 自称超有名BMS作家が物申す！</a>
                       </li>
                     </ul>
+                    <Footer />
                   </div>
                 } />
 
