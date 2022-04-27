@@ -66,7 +66,7 @@ function MainPage(): JSX.Element {
                     { name: 'twitter:site', content: '@yutaortslabo' },
                     { name: 'twitter:title', content: `${(menuItem.text + " | ").replace(/^ \| /, "")}Yu^ta's Laboratory` },
                     { name: 'twitter:description', content: 'Yu^ta の個人サイトです。' },
-                    { name: 'twitter:image', content: 'http://yuinore.moe/twitter-card.png' }
+                    { name: 'twitter:image', content: 'https://yutabms.net/assets/images/twitter-card.png' }
                   ]}
                 />
               } />
