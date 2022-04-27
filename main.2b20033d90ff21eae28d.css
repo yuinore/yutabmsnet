@@ -1,0 +1,356 @@
+@import url(https://fonts.googleapis.com/css2?family=M+PLUS+1&family=Rajdhani:wght@400&family=Rubik:wght@400;600&display=swap);
+/* 共通設定 */
+/* 全体 */
+
+.disabled-link {
+  pointer-events: none;
+}
+
+/* Background */
+/* Title */
+/* Menubar */
+.svg-style-fore {
+  stroke: #000;
+  stroke-linejoin: round;
+  stroke-width: 10;
+}
+
+.svg-style-back {
+  fill:var(--yuta-textcolor);
+}
+
+/* Main Container */
+/* Animation */
+
+/* React Transition Group */
+
+.fade-enter {
+  opacity: 0;
+  transform: translate(0, 10px);
+  z-index: 1;
+}
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transform: translate(0, 0);
+
+  transition: opacity 300ms ease-out, transform 300ms ease;
+}
+.fade-exit {
+  opacity: 1;
+  transform: translate(0, 0);
+  z-index: 0;
+}
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transform: translate(0, 10px);
+
+  transition: opacity 300ms ease-out, transform 300ms ease;
+}
+
+
+/* ---------------------------------------------------------------- */
+
+:root {
+  /* For DEBUG */
+  /*
+  --yuta-bgcolor-body: rgba(255, 255, 255, 1.0);
+  --yuta-bgcolor-title: rgba(255, 0, 0, 0.2);
+  --yuta-bgcolor-nav: rgba(0, 255, 0, 0.2);
+  --yuta-bgcolor-main: rgba(0, 0, 255, 0.2);
+  --yuta-bgcolor-routing: rgba(0, 0, 0, 0.2);
+  --yuta-textcolor: #ff0000;
+  --yuta-textcolor-hover: #00ff00;
+  */
+
+  --yuta-bgcolor-body: #000000;
+  --yuta-bgcolor-title: #000000;
+  --yuta-bgcolor-nav: #000000;
+  --yuta-bgcolor-main: #000000;
+  --yuta-bgcolor-routing: #000000;
+  --yuta-textcolor: #ffffff;
+  --yuta-textcolor-hover: #444444;
+}
+
+h1 a {
+  text-decoration: none;
+}
+
+a {
+  transition: all 0.2s 0s;
+  color: var(--yuta-textcolor);
+}
+
+a:hover {
+  color: var(--yuta-textcolor-hover);
+}
+
+body {
+  animation-name: my-body-animation;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-delay: 0.2s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+
+  opacity: 0.0;
+
+  margin: 0;
+  min-width: 320px;
+  color: var(--yuta-textcolor);
+  background-color: var(--yuta-bgcolor-body);
+
+  text-align: center;
+
+  font-size: 18px;
+  font-family: 'Rubik', 'M PLUS 1', sans-serif;
+  font-weight: 400;
+}
+
+.page-background {
+  display: inline-block;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 1000px;
+  height: 100%;
+  margin: auto;
+  box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.75), 0px 0px 50px rgba(0, 255, 255, 0.5), 0px 0px 100px rgba(0, 0, 255, 0.25);
+  background-color: var(--yuta-bgcolor-body);
+
+}
+
+.page-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  text-align: left;
+}
+
+.page-title {
+  position: relative;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: var(--yuta-bgcolor-title);
+  font-size: 32px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+}
+
+h1 {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0 12px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.page-border {
+  box-sizing: border-box;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: calc(100% - 20px);
+  height: 6px;
+  margin: 10px;
+  max-width: 1000px;
+  background-size: auto auto;
+  background-color: var(--yuta-textcolor);
+  background-image: repeating-linear-gradient(135deg, transparent, transparent 5px, rgba(0, 0, 0, 1) 5px, rgba(0, 0, 0, 1) 11px);
+}
+
+.page-under-title {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.navigation-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 220px;
+  background-color: var(--yuta-bgcolor-nav);
+}
+
+.navigation-button-flow {
+  padding: 10px;
+  width: 200px;
+  height: 62px;
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+  font-size: 32px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.navigation-button-container {
+  position: relative;
+  height: 62px;
+  width: 100%;
+}
+
+.navigation-button {
+  display: block;
+  padding-top: 12px;
+  height: 50px;
+  color: var(--yuta-textcolor);
+  background-size: auto auto;
+  background-color: var(--yuta-textcolor);
+  background-image: repeating-linear-gradient(135deg, transparent, transparent 5px, rgba(0, 0, 0, 1) 5px, rgba(0, 0, 0, 1) 11px);
+
+  transition: all 0.2s 0s;
+}
+
+.navigation-button:hover {
+  background-size: auto auto;
+  background-color: var(--yuta-textcolor-hover);
+  background-image: repeating-linear-gradient(135deg, transparent, transparent 5px, rgba(0, 0, 0, 1) 5px, rgba(0, 0, 0, 1) 11px);
+}
+
+.navigation-button-selected,
+.navigation-button-selected:hover {
+  box-sizing: border-box;
+  height: 62px;
+  border-radius: 20px;
+  background-color: var(--yuta-textcolor);
+  background-image: none;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 1.0);
+}
+
+.main-container {
+  position: absolute;
+  top: 0px;
+  left: 220px;
+  right: 0;
+  background-color: var(--yuta-bgcolor-main);
+}
+
+.routing-container {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 20px;
+  /* background-color: var(--yuta-bgcolor-routing); */
+  overflow: hidden;
+}
+
+svg {
+  max-width: 160px;
+}
+
+@media (max-width: 670px) {
+  .navigation-container {
+    top: 0px;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+
+  .navigation-button-flow {
+    width: calc(50% - 20px - 4px);
+  }
+
+  .main-container {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    right: 0;
+  }
+
+  .navigation-button {
+    text-align: center;
+  }
+
+  svg {
+    width: 100%;
+    max-width: 160px;
+  }
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 1);
+}
+
+img.profile-avatar {
+  width: 140px;
+  border-radius: 9999px;
+}
+
+.routing-container {
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes my-body-animation {
+  0% {
+    opacity: 0.0;
+  }
+
+  100% {
+    opacity: 1.0;
+  }
+}
+
+.lines {
+  position: fixed;
+  z-index: -100;
+  opacity: 0%;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  margin: auto;
+  width: 98vw;
+  overflow: hidden;
+  transition: opacity 3s linear 0s;
+}
+
+.line {
+  content: '';
+  display: block;
+  position: absolute;
+  opacity: 0%;
+  width: 1px;
+  height: 100%;
+  top: -50%;
+  left: 0;
+  margin-left: -100%;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0) 85%, #3399FF 92%, #33FFFF 96%, #3399FF 98%, rgba(255, 255, 255, 0) 100%);
+  animation: drop 45s 0s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes drop {
+  0% {
+    top: 110%;
+    opacity: 0%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    top: -30%;
+    opacity: 0%;
+  }
+}
+
