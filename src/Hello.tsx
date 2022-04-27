@@ -118,7 +118,7 @@ function MainPage(): JSX.Element {
                 <Route path="/" element={
                   <div className="routing-container routing-container-root">
                     <h2>What's new?</h2>
-                    <h3>2022/xx/xx</h3>
+                    <h3>2022/04/28</h3>
                     <p>サイトを公開しました。</p>
                   </div>
                 } />
