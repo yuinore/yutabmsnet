@@ -119,6 +119,8 @@ function MainPage(): JSX.Element {
                 <Route path="/" element={
                   <div className="routing-container routing-container-root">
                     <h2>What's new?</h2>
+                    <h3>2022/04/30</h3>
+                    <p>BOOTHで頒布しております<a href="https://hatoqne.booth.pm/items/1344630" target="_blank">Planisphere</a>の冊子画像に誤りがあったため修正を行いました。BOOTHの商品説明に記載されておりました曲名が正となります。また、<a href="https://hatoqne.booth.pm/items/1344630" target="_blank">Planisphere</a>と<a href="https://hatoqne.booth.pm/items/1344613" target="_blank">Strawberry Mint Chocolate</a>のFLAC版を追加しました。</p>
                     <h3>2022/04/28</h3>
                     <p>サイトを公開しました。</p>
                     <Footer title="Yu^ta's Laboratory" />
