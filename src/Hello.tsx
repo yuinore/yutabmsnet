@@ -259,7 +259,7 @@ function MainPage(): JSX.Element {
                   // Error??
                   // <Navigate to="/" />
 
-                  <meta http-equiv="refresh" content="0;URL=/" />
+                  <meta httpEquiv="refresh" content="0;URL=/" />
                 } />
               </Routes>
             </CSSTransition>
