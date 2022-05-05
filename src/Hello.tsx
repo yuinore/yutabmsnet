@@ -120,7 +120,7 @@ function MainPage(): JSX.Element {
                   <div className="routing-container routing-container-root">
                     <h2>What's new?</h2>
                     <h3>2022/05/04</h3>
-                    <p>5/8開催のCOMIC1☆20に参加を予定しております。Twinkle Space Travelerを含むCD4種を委託する予定です。スペース番号「G08b」にてお待ちしております。</p>
+                    <p>5/8（日）に開催のCOMIC1☆20に参加を予定しております。Twinkle Space Travelerを含むCD4種を委託する予定です。スペース番号「G08b」にてお待ちしております。</p>
                     <h3>2022/04/30</h3>
                     <p>BOOTHで頒布しております<a href="https://hatoqne.booth.pm/items/1344630" target="_blank">Planisphere</a>の冊子画像に誤りがあったため修正を行いました。BOOTHの商品説明に記載されておりました曲名が正となります。また、<a href="https://hatoqne.booth.pm/items/1344630" target="_blank">Planisphere</a>と<a href="https://hatoqne.booth.pm/items/1344613" target="_blank">Strawberry Mint Chocolate</a>のFLAC版を追加しました。</p>
                     <h3>2022/04/28</h3>
