@@ -11,3 +11,10 @@ yarn start
 ```bash
 yarn build
 ```
+
+## Deploy
+
+```bash
+yarn build
+yarn gh-pages -d dist/
+```
