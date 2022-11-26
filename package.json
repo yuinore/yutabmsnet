@@ -11,6 +11,9 @@
     "postbuild": "react-snap ; cp -R assets/ dist/"
   },
   "reactSnap": {
+    "puppeteerArgs": [
+      "--no-sandbox"
+    ],
     "source": "./dist"
   },
   "devDependencies": {
