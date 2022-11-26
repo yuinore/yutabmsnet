@@ -119,6 +119,8 @@ function MainPage(): JSX.Element {
                 <Route path="/" element={
                   <div className="routing-container routing-container-root">
                     <h2>What's new?</h2>
+                    <h3>2022/11/26</h3>
+                    <p>10/30（日）に開催のM3-2022秋に参加し、Twinkle Space Travelerを含むCD4種を頒布しました。今後もホットな情報はTwitterにて発信する予定ですのでぜひフォローをお願いします：<a href="https://twitter.com/yutaortslabo" target="_blank">@yutaortslabo</a></p>
                     <h3>2022/05/04</h3>
                     <p>5/8（日）に開催のCOMIC1☆20に参加を予定しております。Twinkle Space Travelerを含むCD4種を委託する予定です。スペース番号「G08b」にてお待ちしております。</p>
                     <h3>2022/04/30</h3>
@@ -136,7 +138,9 @@ function MainPage(): JSX.Element {
                     <img src="/assets/images/logo.png" className="profile-avatar" />
                     <p>Composer / BMS Creator / Track Maker / Arranger / Since 2009</p>
                     <p>Twitter: <a href="https://twitter.com/yutaortslabo" target="_blank">@yutaortslabo</a></p>
-                    <p>YouTube Channel: <a href="https://www.youtube.com/channel/UCFDLlgwG9hmIYqfKafUepzQ" target="_blank">https://www.youtube.com/channel/UCFDLlgwG9hmIYqfKafUepzQ</a></p>
+                    <p>YouTube Channel: <a href="https://ch.yutabms.net/" target="_blank">https://ch.yutabms.net/</a></p>
+                    <p>YouTube Channel (Sub): <a href="https://ch.yutabms.net/sub" target="_blank">https://ch.yutabms.net/sub</a></p>
+                    <p>SoundCloud: <a href="https://soundcloud.com/strawberry-mint-chocolate/tracks">https://soundcloud.com/strawberry-mint-chocolate/tracks</a></p>
                     <Footer title="About | Yu^ta's Laboratory" />
                   </div>
                 } />
