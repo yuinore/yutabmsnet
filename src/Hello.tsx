@@ -124,6 +124,8 @@ function MainPage(): JSX.Element {
                 <Route path="/" element={
                   <div className="routing-container routing-container-root">
                     <h2>What's new?</h2>
+                    <h3>2023/04/26 更新</h3>
+                    <p>4/30（日）に開催のM3-2023春に参加し、新作CDと新作グッズを頒布します。<a href="https://twitter.com/yutaortslabo/status/1647607097805406210" target="_blank">おしながきはTwitterをご確認ください。</a></p>
                     <h3>2022/11/26</h3>
                     <p>10/30（日）に開催のM3-2022秋に参加し、Twinkle Space Travelerを含むCD4種を頒布しました。今後もホットな情報はTwitterにて発信する予定ですのでぜひフォローをお願いします：<a href="https://twitter.com/yutaortslabo" target="_blank">@yutaortslabo</a></p>
                     <h3>2022/05/04</h3>
@@ -153,6 +155,17 @@ function MainPage(): JSX.Element {
                 <Route path="cds" element={
                   <div className="routing-container routing-container-root">
                     <h2>CDs</h2>
+                    <div>
+                      <h3>現実をカットアップしてみた</h3>
+                      <p>
+                        <img src="assets/images/cds_cutup_jacket.png" />
+                      </p>
+                      <p>無料配布 @ M3-2023春 え-34b</p>
+                      <p>
+                        CD1枚 / 35曲 / 73分
+                      </p>
+                    </div>
+                    <hr />
                     <div>
                       <h3>Twinkle Space Traveler</h3>
                       <p>
