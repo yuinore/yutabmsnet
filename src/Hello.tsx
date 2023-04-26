@@ -51,6 +51,7 @@ function MainPage(): JSX.Element {
     { text: "About", href: "/about" },
     { text: "CDs"  , href: "/cds" },
     { text: "BMS"  , href: "/bms" },
+    { text: "Secret"  , href: "/secret" },
   ];
 
   return (
@@ -96,6 +97,10 @@ function MainPage(): JSX.Element {
         <div className="navigation-container">
           {
             menuItems.filter(menuItem => menuItem.text != "").map((menuItem, i) => {
+              if (menuItem.href === '/secret' && location.pathname !== '/secret') {
+                return <></>;
+              }
+
               return (
                 <div className="navigation-button-flow" key={i}>
                   <div className="navigation-button-container">
@@ -258,6 +263,22 @@ function MainPage(): JSX.Element {
                       </li>
                     </ul>
                     <Footer title="BMS | Yu^ta's Laboratory" />
+                  </div>
+                } />
+
+                <Route path="secret" element={
+                  <div className="routing-container routing-container-root">
+                    <h2>Secret</h2>
+                    <p>
+                      <img src="assets/images/secret.png" />
+                    </p>
+                    <p>
+                      <form action="https://yuinore.moe/secret2023/post.php" method="POST">
+                        <input type="text" name="password" placeholder="password" style={{ fontSize: "1.2em" }} />
+                        <button type="submit" style={{ fontSize: "1.2em" }}>Submit</button>
+                      </form>
+                    </p>
+                    <Footer title="Secret | Yu^ta's Laboratory" />
                   </div>
                 } />
 
