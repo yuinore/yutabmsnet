@@ -48,9 +48,6 @@ const MovieList = () => {
           alt="現実をカットアップしてみた" style={{ width: 96, height: 96 }} loading="lazy" /></p>
       <p><a href="https://www.youtube.com/watch?v=olFZDX0PeBQ" target="_blank" rel="noopener"><span>この動画を YouTube
             で見る</span></a></p>
-      <hr /><h3 id="Sweets" data-id="Sweets"><span>Sweets</span></h3>
-      <p><img src="https://whiteless.works/images/movie_007_sweets.png" alt="あまいこと" loading="lazy" /></p>
-      <p><span>CD未収録</span></p>
       <hr /><h3 id="Rainbow-Night-Party" data-id="Rainbow-Night-Party"><span>Rainbow Night Party</span></h3>
       <p><span>映像制作: </span><a href="https://to12lz.myportfolio.com/" target="_blank"
           rel="noopener"><span>tolz</span></a>
