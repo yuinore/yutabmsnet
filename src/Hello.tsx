@@ -11,6 +11,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import { Helmet } from "react-helmet";
 import "./Hello.css"
 import Footer from "./Footer"
+import MovieList from "./components/MovieList";
 
 function Hello(): JSX.Element {
   return (
@@ -51,6 +52,7 @@ function MainPage(): JSX.Element {
     { text: "About", href: "/about" },
     { text: "CDs"  , href: "/cds" },
     { text: "BMS"  , href: "/bms" },
+    { text: "Movies", href: "/movies" },
     { text: "Secret"  , href: "/secret" },
   ];
 
@@ -276,6 +278,14 @@ function MainPage(): JSX.Element {
                       </li>
                     </ul>
                     <Footer title="BMS | Yu^ta's Laboratory" />
+                  </div>
+                } />
+
+                <Route path="movies" element={
+                  <div className="routing-container routing-container-root">
+                    <h2>Movies</h2>
+                    <MovieList />
+                    <Footer title="Movies | Yu^ta's Laboratory" />
                   </div>
                 } />
 
