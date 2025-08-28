@@ -12,8 +12,6 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.ts', '.jsx', '.tsx', '.css'],
     alias: {
-      // React Hot Loader Patch
-      'react-dom': '@hot-loader/react-dom',
       // Custom Aliases
       ...require('./webpack.aliases'),
     },
@@ -22,11 +20,15 @@ module.exports = {
   devtool: 'cheap-module-source-map',
   devServer: {
     open: true,
-    stats: 'errors-warnings',
     hot: true,
 
     // SPA Routing Setting
     historyApiFallback: { index: "/", disableDotRule: true },
+    
+    // Dev middleware configuration
+    devMiddleware: {
+      stats: 'errors-warnings',
+    },
   },
   optimization: {
     splitChunks: {

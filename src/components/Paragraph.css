@@ -1,0 +1,7 @@
+/* Paragraph コンポーネントのスタイル */
+
+.paragraph {
+  /* pタグのような下マージンを設定 */
+  margin-bottom: 1rem;
+
+}
