@@ -7,7 +7,7 @@
     "build": "cross-env NODE_ENV=production webpack --config tools/webpack/webpack.config.prod.js",
     "deploy": "yarn build && yarn gh-pages -d dist/",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src/",
-    "postbuild": "react-snap ; cp -R assets/ dist/"
+    "postbuild": "react-snap ; cp -R public/assets/ dist/"
   },
   "reactSnap": {
     "puppeteerArgs": [
