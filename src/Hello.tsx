@@ -5,11 +5,13 @@ import {
   Route,
   NavLink,
   useLocation,
+  Navigate,
 } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import "./Hello.css"
 import Footer from "./Footer"
 import MovieList from "./components/MovieList";
+import Paragraph from "./components/Paragraph";
 
 export default function Hello(): React.ReactNode {
   return (
@@ -42,6 +44,11 @@ function MainPage(): React.ReactNode {
     { text: "Movies", href: "/movies", nodeRef: createRef<HTMLDivElement>() },
     { text: "Secret"  , href: "/secret", nodeRef: createRef<HTMLDivElement>() },
   ];
+
+  // 末尾がスラッシュで終わる場合、 nodeRef が見つからず null になってしまう場合がある
+  if (location.pathname !== "/" && location.pathname.endsWith("/")) {
+    return <Navigate to={location.pathname.slice(0, -1)} replace />;
+  }
 
   // Find the current route's nodeRef
   const { nodeRef } = menuItems.find((item) => item.href === location.pathname) ?? {};
@@ -123,20 +130,20 @@ function MainPage(): React.ReactNode {
                     <div className="routing-container routing-container-root">
                       <h2>What's new?</h2>
                       <h3>2025/8/28 更新</h3>
-                      <p>C107 に申し込みを行いました。当選したらオリジナル曲のピアノ楽譜を頒布する予定です。</p>
-                      <p>
+                      <Paragraph>C107 に申し込みを行いました。当選したらオリジナル曲のピアノ楽譜を頒布する予定です。</Paragraph>
+                      <Paragraph>
                         <img src="https://yuinore.moe/c107cut.jpg" />
-                      </p>
+                      </Paragraph>
                       <h3>2023/4/26 更新</h3>
-                      <p>4/30（日）に開催のM3-2023春に参加し、新作CDと新作グッズを頒布します。<a href="https://twitter.com/yutaortslabo/status/1647607097805406210" target="_blank">おしながきはTwitterをご確認ください。</a></p>
+                      <Paragraph>4/30（日）に開催のM3-2023春に参加し、新作CDと新作グッズを頒布します。<a href="https://twitter.com/yutaortslabo/status/1647607097805406210" target="_blank">おしながきはTwitterをご確認ください。</a></Paragraph>
                       <h3>2022/11/26</h3>
-                      <p>10/30（日）に開催のM3-2022秋に参加し、Twinkle Space Travelerを含むCD4種を頒布しました。今後もホットな情報はTwitterにて発信する予定ですのでぜひフォローをお願いします：<a href="https://twitter.com/yutaortslabo" target="_blank">@yutaortslabo</a></p>
+                      <Paragraph>10/30（日）に開催のM3-2022秋に参加し、Twinkle Space Travelerを含むCD4種を頒布しました。今後もホットな情報はTwitterにて発信する予定ですのでぜひフォローをお願いします：<a href="https://twitter.com/yutaortslabo" target="_blank">@yutaortslabo</a></Paragraph>
                       <h3>2022/5/4</h3>
-                      <p>5/8（日）に開催のCOMIC1☆20に参加を予定しております。Twinkle Space Travelerを含むCD4種を委託する予定です。スペース番号「G08b」にてお待ちしております。</p>
+                      <Paragraph>5/8（日）に開催のCOMIC1☆20に参加を予定しております。Twinkle Space Travelerを含むCD4種を委託する予定です。スペース番号「G08b」にてお待ちしております。</Paragraph>
                       <h3>2022/4/30</h3>
-                      <p>BOOTHで頒布しております<a href="https://hatoqne.booth.pm/items/1344630" target="_blank">Planisphere</a>の冊子画像に誤りがあったため修正を行いました。BOOTHの商品説明に記載されておりました曲名が正となります。また、<a href="https://hatoqne.booth.pm/items/1344630" target="_blank">Planisphere</a>と<a href="https://hatoqne.booth.pm/items/1344613" target="_blank">Strawberry Mint Chocolate</a>のFLAC版を追加しました。</p>
+                      <Paragraph>BOOTHで頒布しております<a href="https://hatoqne.booth.pm/items/1344630" target="_blank">Planisphere</a>の冊子画像に誤りがあったため修正を行いました。BOOTHの商品説明に記載されておりました曲名が正となります。また、<a href="https://hatoqne.booth.pm/items/1344630" target="_blank">Planisphere</a>と<a href="https://hatoqne.booth.pm/items/1344613" target="_blank">Strawberry Mint Chocolate</a>のFLAC版を追加しました。</Paragraph>
                       <h3>2022/4/28</h3>
-                      <p>サイトを公開しました。</p>
+                      <Paragraph>サイトを公開しました。</Paragraph>
                       <Footer title="Yu^ta's Laboratory" />
                     </div>
                   } />
@@ -146,11 +153,11 @@ function MainPage(): React.ReactNode {
                       <h2>About</h2>
                       <h3>Yu^ta</h3>
                       <img src="/assets/images/logo.png" className="profile-avatar" />
-                      <p>Composer / BMS Creator / Track Maker / Arranger / Since 2009</p>
-                      <p>Twitter: <a href="https://twitter.com/yutaortslabo" target="_blank">@yutaortslabo</a></p>
-                      <p>YouTube Channel: <a href="https://ch.yutabms.net/" target="_blank">https://ch.yutabms.net/</a></p>
-                      <p>YouTube Channel (Sub): <a href="https://ch.yutabms.net/sub" target="_blank">https://ch.yutabms.net/sub</a></p>
-                      <p>SoundCloud: <a href="https://soundcloud.com/strawberry-mint-chocolate/tracks">https://soundcloud.com/strawberry-mint-chocolate/tracks</a></p>
+                      <Paragraph>Composer / BMS Creator / Track Maker / Arranger / Since 2009</Paragraph>
+                      <Paragraph>Twitter: <a href="https://twitter.com/yutaortslabo" target="_blank">@yutaortslabo</a></Paragraph>
+                      <Paragraph>YouTube Channel: <a href="https://ch.yutabms.net/" target="_blank">https://ch.yutabms.net/</a></Paragraph>
+                      <Paragraph>YouTube Channel (Sub): <a href="https://ch.yutabms.net/sub" target="_blank">https://ch.yutabms.net/sub</a></Paragraph>
+                      <Paragraph>SoundCloud: <a href="https://soundcloud.com/strawberry-mint-chocolate/tracks">https://soundcloud.com/strawberry-mint-chocolate/tracks</a></Paragraph>
                       <Footer title="About | Yu^ta's Laboratory" />
                     </div>
                   } />
@@ -160,23 +167,23 @@ function MainPage(): React.ReactNode {
                       <h2>CDs</h2>
                       <div>
                         <h3>現実をカットアップしてみた</h3>
-                        <p>
+                        <Paragraph>
                           <img src="assets/images/cds_cutup_jacket.png" />
-                        </p>
-                        <p>無料配布 @ M3-2023春 え-34b</p>
-                        <p>
+                        </Paragraph>
+                        <Paragraph>無料配布 @ M3-2023春 え-34b</Paragraph>
+                        <Paragraph>
                           CD1枚 / 35曲 / 73分
-                        </p>
+                        </Paragraph>
                       </div>
                       <hr />
                       <div>
                         <h3>Twinkle Space Traveler</h3>
-                        <p>
+                        <Paragraph>
                           <iframe width="100%" height={166} scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1251785857&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" /><div style={{fontSize: '10px', color: '#cccccc', lineBreak: 'anywhere', wordBreak: 'normal', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis', fontFamily: 'Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif', fontWeight: 100}}><a href="https://soundcloud.com/strawberry-mint-chocolate" title="Strawberry Mint Chocolate" target="_blank" style={{color: '#cccccc', textDecoration: 'none'}}>Strawberry Mint Chocolate</a> · <a href="https://soundcloud.com/strawberry-mint-chocolate/twinkle-space-travelercrossfade" title="【Crossfade】Twinkle Space Traveler【M3-2022春 う-24b】" target="_blank" style={{color: '#cccccc', textDecoration: 'none'}}>【Crossfade】Twinkle Space Traveler【M3-2022春 う-24b】</a></div>
-                        </p>
-                        <p>￥500 @ M3-2022春 う-24b</p>
-                        <p><a href="https://hatoqne.booth.pm/items/3819084" target="_blank">[BOOTH]</a></p>
-                        <p>
+                        </Paragraph>
+                        <Paragraph>￥500 @ M3-2022春 う-24b</Paragraph>
+                        <Paragraph><a href="https://hatoqne.booth.pm/items/3819084" target="_blank">[BOOTH]</a></Paragraph>
+                        <Paragraph>
                           01. Mana<br />
                           02. Now in the Castle Age (Original Mix)<br />
                           03. Sweet festival (Yu^ta Remix) / Shu※ remixed by Yu^ta<br />
@@ -189,17 +196,17 @@ function MainPage(): React.ReactNode {
                           10. WonderfuLoop (Yu^ta Remix) / Uynet remixed by Yu^ta<br />
                           11. Planisphere (Electro Pop Mix)<br />
                           12. Twinkle Space Traveler<br />
-                        </p>
+                        </Paragraph>
                       </div>
                       <hr />
                       <div>
                         <h3>にゃーんEP</h3>
-                        <p>
+                        <Paragraph>
                           <iframe width="100%" height={166} scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/480110112&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" /><div style={{fontSize: '10px', color: '#cccccc', lineBreak: 'anywhere', wordBreak: 'normal', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis', fontFamily: 'Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif', fontWeight: 100}}><a href="https://soundcloud.com/strawberry-mint-chocolate" title="Strawberry Mint Chocolate" target="_blank" style={{color: '#cccccc', textDecoration: 'none'}}>Strawberry Mint Chocolate</a> · <a href="https://soundcloud.com/strawberry-mint-chocolate/c94ep-demo1-10b" title="【C94】にゃーんEP DEMO【1日目 西ふ10b】" target="_blank" style={{color: '#cccccc', textDecoration: 'none'}}>【C94】にゃーんEP DEMO【1日目 西ふ10b】</a></div>
-                        </p>
-                        <p>￥500 @ C94 1日目 西ふ10b</p>
-                        <p><a href="https://hatoqne.booth.pm/items/1344645" target="_blank">[BOOTH]</a></p>
-                        <p>
+                        </Paragraph>
+                        <Paragraph>￥500 @ C94 1日目 西ふ10b</Paragraph>
+                        <Paragraph><a href="https://hatoqne.booth.pm/items/1344645" target="_blank">[BOOTH]</a></Paragraph>
+                        <Paragraph>
                           01. にゃーん！ / Yu^ta<br />
                           02. Buttered Paradox / Maroyu<br />
                           03. 終末を告げしネコ / BJ.chika<br />
@@ -208,17 +215,17 @@ function MainPage(): React.ReactNode {
                           06. きまぐれキャット / そめし feat. 兎眠りおん<br />
                           <br />
                           Mastering: BJ.chika<br />
-                        </p>
+                        </Paragraph>
                       </div>
                       <hr />
                       <div>
                         <h3>Planisphere</h3>
-                        <p>
+                        <Paragraph>
                           <iframe width="100%" height={166} scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/299723870&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" /><div style={{fontSize: '10px', color: '#cccccc', lineBreak: 'anywhere', wordBreak: 'normal', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis', fontFamily: 'Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif', fontWeight: 100}}><a href="https://soundcloud.com/strawberry-mint-chocolate" title="Strawberry Mint Chocolate" target="_blank" style={{color: '#cccccc', textDecoration: 'none'}}>Strawberry Mint Chocolate</a> · <a href="https://soundcloud.com/strawberry-mint-chocolate/c91-planisphere-demo2" title="【C91】 Planisphere DEMO2 【3日目 西よ40a】" target="_blank" style={{color: '#cccccc', textDecoration: 'none'}}>【C91】 Planisphere DEMO2 【3日目 西よ40a】</a></div>
-                        </p>
-                        <p>￥500 @ C91 3日目 西よ40a</p>
-                        <p><a href="https://hatoqne.booth.pm/items/1344630" target="_blank">[BOOTH]</a></p>
-                        <p>
+                        </Paragraph>
+                        <Paragraph>￥500 @ C91 3日目 西よ40a</Paragraph>
+                        <Paragraph><a href="https://hatoqne.booth.pm/items/1344630" target="_blank">[BOOTH]</a></Paragraph>
+                        <Paragraph>
                           01. Sunny<br />
                           02. CHAiNSAW<br />
                           03. THE EARTH<br />
@@ -231,17 +238,17 @@ function MainPage(): React.ReactNode {
                           10. Busy Factory<br />
                           11. Strawberry Mint Chocolate (2016 Remix)<br />
                           12. Planisphere<br />
-                        </p>
+                        </Paragraph>
                       </div>
                       <hr />
                       <div>
                         <h3>Strawberry Mint Chocolate</h3>
-                        <p>
+                        <Paragraph>
                           <iframe width="100%" height={166} scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/228612756&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" /><div style={{fontSize: '10px', color: '#cccccc', lineBreak: 'anywhere', wordBreak: 'normal', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis', fontFamily: 'Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif', fontWeight: 100}}><a href="https://soundcloud.com/strawberry-mint-chocolate" title="Strawberry Mint Chocolate" target="_blank" style={{color: '#cccccc', textDecoration: 'none'}}>Strawberry Mint Chocolate</a> · <a href="https://soundcloud.com/strawberry-mint-chocolate/strawberry-mint-chocolate-xfd" title="【M3-2015秋】 Strawberry Mint Chocolate 【XFD】" target="_blank" style={{color: '#cccccc', textDecoration: 'none'}}>【M3-2015秋】 Strawberry Mint Chocolate 【XFD】</a></div>
-                        </p>
-                        <p>￥500 @ M3-2015秋 K-01a</p>
-                        <p><a href="https://hatoqne.booth.pm/items/1344613" target="_blank">[BOOTH]</a></p>
-                        <p>
+                        </Paragraph>
+                        <Paragraph>￥500 @ M3-2015秋 K-01a</Paragraph>
+                        <Paragraph><a href="https://hatoqne.booth.pm/items/1344613" target="_blank">[BOOTH]</a></Paragraph>
+                        <Paragraph>
                           01. Party Time!<br />
                           02. wa:k around the wor:d<br />
                           03. C.E.N.T.E.R.<br />
@@ -256,7 +263,7 @@ function MainPage(): React.ReactNode {
                           12. Strawberry Mint Chocolate<br />
                           <br />
                           特設サイト <a href="http://strawberry-mint-chocolate.com/" target="_blank">http://strawberry-mint-chocolate.com/</a><br />
-                        </p>
+                        </Paragraph>
                       </div>
                       <Footer title="CDs | Yu^ta's Laboratory" />
                     </div>
@@ -265,7 +272,7 @@ function MainPage(): React.ReactNode {
                   <Route path="bms" element={
                     <div className="routing-container routing-container-root">
                       <h2>BMS</h2>
-                      <p>Under Construction...</p>
+                      <Paragraph>Under Construction...</Paragraph>
                       <h3>Links</h3>
                       <ul>
                         <li>
@@ -293,15 +300,15 @@ function MainPage(): React.ReactNode {
                   <Route path="secret" element={
                     <div className="routing-container routing-container-root">
                       <h2>Secret</h2>
-                      <p>
+                      <Paragraph>
                         <img src="assets/images/secret.png" />
-                      </p>
-                      <p>
+                      </Paragraph>
+                      <Paragraph>
                         <form action="https://yuinore.moe/secret2023/post.php" method="POST">
                           <input type="text" name="password" placeholder="password" style={{ fontSize: "1.2em" }} />
                           <button type="submit" style={{ fontSize: "1.2em" }}>Submit</button>
                         </form>
-                      </p>
+                      </Paragraph>
                       <Footer title="Secret | Yu^ta's Laboratory" />
                     </div>
                   } />
