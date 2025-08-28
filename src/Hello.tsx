@@ -8,18 +8,15 @@ import {
   useLocation,
 } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import { Helmet, HelmetProvider } from "react-helmet-async";
 import "./Hello.css"
 import Footer from "./Footer"
 import MovieList from "./components/MovieList";
 
 export default function Hello(): React.ReactNode {
   return (
-    <HelmetProvider>
-      <Router>
-        <MainPage />
-      </Router>
-    </HelmetProvider>
+    <Router>
+      <MainPage />
+    </Router>
   );
 }
 
@@ -63,19 +60,16 @@ function MainPage(): React.ReactNode {
       <Routes location={location}>
         {
           menuItems.map((menuItem, i) => {
+            const title = `${(menuItem.text + " | ").replace(/^ \| /, "")}Yu^ta's Laboratory`;
             return (
               <Route path={menuItem.href} key={i} element={
                 <>
-                  <Helmet
-                    title={`${(menuItem.text + " | ").replace(/^ \| /, "")}Yu^ta's Laboratory`}
-                    meta={[
-                      { name: 'twitter:card', content: 'summary_large_image' },
-                      { name: 'twitter:site', content: '@yutaortslabo' },
-                      { name: 'twitter:title', content: `${(menuItem.text + " | ").replace(/^ \| /, "")}Yu^ta's Laboratory` },
-                      { name: 'twitter:description', content: 'Yu^ta の個人サイトです。' },
-                      { name: 'twitter:image', content: 'https://yutabms.net/assets/images/twitter-card.png' }
-                    ]}
-                  />
+                  <title>{title}</title>
+                  <meta name="twitter:card" content="summary_large_image" />
+                  <meta name="twitter:site" content="@yutaortslabo" />
+                  <meta name="twitter:title" content={title} />
+                  <meta name="twitter:description" content="Yu^ta の個人サイトです。" />
+                  <meta name="twitter:image" content="https://yutabms.net/assets/images/twitter-card.png" />
                 </>
               } />
             )
