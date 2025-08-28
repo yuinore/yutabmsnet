@@ -8,45 +8,47 @@ import {
   useLocation,
 } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import "./Hello.css"
 import Footer from "./Footer"
 import MovieList from "./components/MovieList";
 
-function Hello(): JSX.Element {
+export default function Hello(): React.ReactNode {
   return (
-    <Router>
-      <MainPage />
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <MainPage />
+      </Router>
+    </HelmetProvider>
   );
 }
 
-function MainPage(): JSX.Element {
+function MainPage(): React.ReactNode {
   const location = useLocation();
 
-  const [now, setNow] = useState(Date.now());
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      // TODO:
-      /*
-      const line_count = 80;
+  // const [now, setNow] = useState(Date.now());
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     // TODO:
+  //     /*
+  //     const line_count = 80;
 
-      const lines_node = document.querySelector(".lines");
-      lines_node.style.opacity = "100%";
+  //     const lines_node = document.querySelector(".lines");
+  //     lines_node.style.opacity = "100%";
 
-      const line_nodes = document.querySelectorAll(".line");
-      for (let i = 0; i < line_count; i++) {
-        line_nodes[i].style.marginLeft = `${Math.round(1000 * (i + Math.random()) / line_count) / 10}%`;
-        line_nodes[i].style.animationDelay = `${-Math.round(45 * 100 * Math.random()) / 100}s`
-      }
-      */
-    }, 500);
+  //     const line_nodes = document.querySelectorAll(".line");
+  //     for (let i = 0; i < line_count; i++) {
+  //       line_nodes[i].style.marginLeft = `${Math.round(1000 * (i + Math.random()) / line_count) / 10}%`;
+  //       line_nodes[i].style.animationDelay = `${-Math.round(45 * 100 * Math.random()) / 100}s`
+  //     }
+  //     */
+  //   }, 500);
 
-    return () => {
-      // cancel Timer
-      clearTimeout(timer);
-    };
-  }, [now]);
+  //   return () => {
+  //     // cancel Timer
+  //     clearTimeout(timer);
+  //   };
+  // }, [now]);
   const menuItems = [
     { text: "", href: "/" },
     { text: "About", href: "/about" },
@@ -63,16 +65,18 @@ function MainPage(): JSX.Element {
           menuItems.map((menuItem, i) => {
             return (
               <Route path={menuItem.href} key={i} element={
-                <Helmet
-                  title={`${(menuItem.text + " | ").replace(/^ \| /, "")}Yu^ta's Laboratory`}
-                  meta={[
-                    { name: 'twitter:card', content: 'summary_large_image' },
-                    { name: 'twitter:site', content: '@yutaortslabo' },
-                    { name: 'twitter:title', content: `${(menuItem.text + " | ").replace(/^ \| /, "")}Yu^ta's Laboratory` },
-                    { name: 'twitter:description', content: 'Yu^ta の個人サイトです。' },
-                    { name: 'twitter:image', content: 'https://yutabms.net/assets/images/twitter-card.png' }
-                  ]}
-                />
+                <>
+                  <Helmet
+                    title={`${(menuItem.text + " | ").replace(/^ \| /, "")}Yu^ta's Laboratory`}
+                    meta={[
+                      { name: 'twitter:card', content: 'summary_large_image' },
+                      { name: 'twitter:site', content: '@yutaortslabo' },
+                      { name: 'twitter:title', content: `${(menuItem.text + " | ").replace(/^ \| /, "")}Yu^ta's Laboratory` },
+                      { name: 'twitter:description', content: 'Yu^ta の個人サイトです。' },
+                      { name: 'twitter:image', content: 'https://yutabms.net/assets/images/twitter-card.png' }
+                    ]}
+                  />
+                </>
               } />
             )
           })
@@ -324,5 +328,3 @@ function MainPage(): JSX.Element {
     </div>
   );
 }
-
-export default Hello;

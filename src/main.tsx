@@ -1,12 +1,12 @@
 import * as React from "react";
-import { hydrate, render } from "react-dom";
+import { hydrateRoot, createRoot } from "react-dom/client";
 import Hello from "./Hello";
 
 const rootElement = document.getElementById("main");
 if (rootElement.hasChildNodes()) {
-  hydrate(<Hello />, rootElement);
+  hydrateRoot(rootElement, <Hello />);
 } else {
-  render(<Hello />, rootElement);
+  createRoot(rootElement).render(<Hello />);
 }
 
 /*import * as React from "react";

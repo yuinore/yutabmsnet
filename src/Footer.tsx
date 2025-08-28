@@ -9,7 +9,7 @@ import {
   TwitterShareButton,
 } from "react-share"
 
-function Footer(props : {title: string}): JSX.Element {
+export default function Footer(props : {title: string}): React.ReactNode {
   const location = useLocation();
   const url = document.location.href.split('/').slice(0, 3).join('/') + location.pathname;
 
@@ -27,5 +27,3 @@ function Footer(props : {title: string}): JSX.Element {
     </div>
   );
 }
-
-export default Footer;

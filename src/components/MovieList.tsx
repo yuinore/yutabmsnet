@@ -10,7 +10,7 @@ import React from 'react';
 // ・h2 を h3 に
 // ・最初以外のh3をhrタグ+h3タグに
 
-const MovieList = () => {
+export default function MovieList(): React.ReactNode {
   return (
     <>
       <h3 id="Fly-up-to--the-Sky" data-id="Fly-up-to--the-Sky"><span>Fly up to : the Sky</span></h3>
@@ -130,5 +130,3 @@ const MovieList = () => {
     </>
   );
 };
-
-export default MovieList;
