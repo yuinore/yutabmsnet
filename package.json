@@ -1,8 +1,7 @@
 {
-  "name": "react-webpack-typescript-2021",
+  "name": "yutabmsnet",
   "version": "1.0.0",
-  "description": "Minimal boilerplate for writing Web Applications using React, Webpack & TypeScript in 2021",
-  "license": "MIT",
+  "description": "My portfolio site.",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve --config tools/webpack/webpack.config.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config tools/webpack/webpack.config.prod.js",

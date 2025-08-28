@@ -126,15 +126,20 @@ function MainPage(): JSX.Element {
                 <Route path="/" element={
                   <div className="routing-container routing-container-root">
                     <h2>What's new?</h2>
-                    <h3>2023/04/26 更新</h3>
+                    <h3>2025/8/28 更新</h3>
+                    <p>C107 に申し込みを行いました。当選したらオリジナル曲のピアノ楽譜を頒布する予定です。</p>
+                    <p>
+                      <img src="https://yuinore.moe/c107cut.jpg" />
+                    </p>
+                    <h3>2023/4/26 更新</h3>
                     <p>4/30（日）に開催のM3-2023春に参加し、新作CDと新作グッズを頒布します。<a href="https://twitter.com/yutaortslabo/status/1647607097805406210" target="_blank">おしながきはTwitterをご確認ください。</a></p>
                     <h3>2022/11/26</h3>
                     <p>10/30（日）に開催のM3-2022秋に参加し、Twinkle Space Travelerを含むCD4種を頒布しました。今後もホットな情報はTwitterにて発信する予定ですのでぜひフォローをお願いします：<a href="https://twitter.com/yutaortslabo" target="_blank">@yutaortslabo</a></p>
-                    <h3>2022/05/04</h3>
+                    <h3>2022/5/4</h3>
                     <p>5/8（日）に開催のCOMIC1☆20に参加を予定しております。Twinkle Space Travelerを含むCD4種を委託する予定です。スペース番号「G08b」にてお待ちしております。</p>
-                    <h3>2022/04/30</h3>
+                    <h3>2022/4/30</h3>
                     <p>BOOTHで頒布しております<a href="https://hatoqne.booth.pm/items/1344630" target="_blank">Planisphere</a>の冊子画像に誤りがあったため修正を行いました。BOOTHの商品説明に記載されておりました曲名が正となります。また、<a href="https://hatoqne.booth.pm/items/1344630" target="_blank">Planisphere</a>と<a href="https://hatoqne.booth.pm/items/1344613" target="_blank">Strawberry Mint Chocolate</a>のFLAC版を追加しました。</p>
-                    <h3>2022/04/28</h3>
+                    <h3>2022/4/28</h3>
                     <p>サイトを公開しました。</p>
                     <Footer title="Yu^ta's Laboratory" />
                   </div>

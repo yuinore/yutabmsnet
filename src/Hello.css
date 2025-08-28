@@ -69,6 +69,7 @@
   --yuta-bgcolor-routing: #000000;
   --yuta-textcolor: #ffffff;
   --yuta-textcolor-hover: #444444;
+  --yuta-textcolor-active: #888888;
 }
 
 h1 a {
@@ -226,6 +227,10 @@ hr {
   background-image: repeating-linear-gradient(135deg, transparent, transparent 5px, rgba(0, 0, 0, 1) 5px, rgba(0, 0, 0, 1) 11px);
 
   transition: all 0.2s 0s;
+}
+
+.navigation-button.disabled-link {
+  background-color: var(--yuta-textcolor-active);
 }
 
 .navigation-button:hover {
