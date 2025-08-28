@@ -98,7 +98,7 @@ function MainPage(): React.ReactNode {
           {
             menuItems.filter(menuItem => menuItem.text != "").map((menuItem, i) => {
               if (menuItem.href === '/secret' && location.pathname !== '/secret') {
-                return <></>;
+                return <React.Fragment key={i} />;
               }
 
               return (
