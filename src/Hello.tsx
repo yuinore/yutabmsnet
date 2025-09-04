@@ -163,18 +163,46 @@ function MainPage(): JSX.Element {
                   <div className="routing-container routing-container-root">
                     <h2>CDs</h2>
                     <div>
-                      <h3>現実をカットアップしてみた</h3>
+                      <h3 id="funny-fancy-fantasia">Funny Fancy Fantasia</h3>
                       <p>
+                        <a href="https://hatoqne.booth.pm/items/6925860" target="_blank">
+                          <img src="assets/images/cds_fff_jacket.png" />
+                        </a>
+                      </p>
+                      <p>￥500 @ M3-2025春 P-21ab</p>
+                      <p><a href="https://hatoqne.booth.pm/items/6925860" target="_blank">[BOOTH]</a></p>
+                      <p>
+                        01. にゃーん！！<br />
+                        02. white * cocoa<br />
+                        03. Magical Toy Vox<br />
+                        04. Now in the Castle Age (True Techno Remix)<br />
+                        05. 英雄 ～氷の妖精のお話～ (2024 Remastered)<br />
+                        06. Brand New Year<br />
+                        07. 一曲即発☆スグロイド<br />
+                        08. Kindergarten<br />
+                        09. March 27<br />
+                        10. Misty Rain<br />
+                        11. The Blue Bird (piano arrangement ver.)<br />
+                        12. Funny Fancy Fantasia<br />
+                      </p>
+                    </div>
+                    <hr />
+                    <div>
+                      <h3 id="cutup-the-reality">現実をカットアップしてみた</h3>
+                      <p>
+                        <a href="https://hatoqne.booth.pm/items/4718397" target="_blank">
                         <img src="assets/images/cds_cutup_jacket.png" />
+                        </a>
                       </p>
                       <p>無料配布 @ M3-2023春 え-34b</p>
+                      <p><a href="https://hatoqne.booth.pm/items/4718397" target="_blank">[BOOTH]</a></p>
                       <p>
                         CD1枚 / 35曲 / 73分
                       </p>
                     </div>
                     <hr />
                     <div>
-                      <h3>Twinkle Space Traveler</h3>
+                      <h3 id="twinkle-space-traveler">Twinkle Space Traveler</h3>
                       <p>
                         <iframe width="100%" height={166} scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1251785857&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" /><div style={{fontSize: '10px', color: '#cccccc', lineBreak: 'anywhere', wordBreak: 'normal', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis', fontFamily: 'Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif', fontWeight: 100}}><a href="https://soundcloud.com/strawberry-mint-chocolate" title="Strawberry Mint Chocolate" target="_blank" style={{color: '#cccccc', textDecoration: 'none'}}>Strawberry Mint Chocolate</a> · <a href="https://soundcloud.com/strawberry-mint-chocolate/twinkle-space-travelercrossfade" title="【Crossfade】Twinkle Space Traveler【M3-2022春 う-24b】" target="_blank" style={{color: '#cccccc', textDecoration: 'none'}}>【Crossfade】Twinkle Space Traveler【M3-2022春 う-24b】</a></div>
                       </p>
@@ -197,7 +225,7 @@ function MainPage(): JSX.Element {
                     </div>
                     <hr />
                     <div>
-                      <h3>にゃーんEP</h3>
+                      <h3 id="nyan-ep">にゃーんEP</h3>
                       <p>
                         <iframe width="100%" height={166} scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/480110112&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" /><div style={{fontSize: '10px', color: '#cccccc', lineBreak: 'anywhere', wordBreak: 'normal', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis', fontFamily: 'Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif', fontWeight: 100}}><a href="https://soundcloud.com/strawberry-mint-chocolate" title="Strawberry Mint Chocolate" target="_blank" style={{color: '#cccccc', textDecoration: 'none'}}>Strawberry Mint Chocolate</a> · <a href="https://soundcloud.com/strawberry-mint-chocolate/c94ep-demo1-10b" title="【C94】にゃーんEP DEMO【1日目 西ふ10b】" target="_blank" style={{color: '#cccccc', textDecoration: 'none'}}>【C94】にゃーんEP DEMO【1日目 西ふ10b】</a></div>
                       </p>
@@ -216,7 +244,7 @@ function MainPage(): JSX.Element {
                     </div>
                     <hr />
                     <div>
-                      <h3>Planisphere</h3>
+                      <h3 id="planisphere">Planisphere</h3>
                       <p>
                         <iframe width="100%" height={166} scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/299723870&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" /><div style={{fontSize: '10px', color: '#cccccc', lineBreak: 'anywhere', wordBreak: 'normal', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis', fontFamily: 'Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif', fontWeight: 100}}><a href="https://soundcloud.com/strawberry-mint-chocolate" title="Strawberry Mint Chocolate" target="_blank" style={{color: '#cccccc', textDecoration: 'none'}}>Strawberry Mint Chocolate</a> · <a href="https://soundcloud.com/strawberry-mint-chocolate/c91-planisphere-demo2" title="【C91】 Planisphere DEMO2 【3日目 西よ40a】" target="_blank" style={{color: '#cccccc', textDecoration: 'none'}}>【C91】 Planisphere DEMO2 【3日目 西よ40a】</a></div>
                       </p>
@@ -239,7 +267,7 @@ function MainPage(): JSX.Element {
                     </div>
                     <hr />
                     <div>
-                      <h3>Strawberry Mint Chocolate</h3>
+                      <h3 id="strawberry-mint-chocolate">Strawberry Mint Chocolate</h3>
                       <p>
                         <iframe width="100%" height={166} scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/228612756&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" /><div style={{fontSize: '10px', color: '#cccccc', lineBreak: 'anywhere', wordBreak: 'normal', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis', fontFamily: 'Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif', fontWeight: 100}}><a href="https://soundcloud.com/strawberry-mint-chocolate" title="Strawberry Mint Chocolate" target="_blank" style={{color: '#cccccc', textDecoration: 'none'}}>Strawberry Mint Chocolate</a> · <a href="https://soundcloud.com/strawberry-mint-chocolate/strawberry-mint-chocolate-xfd" title="【M3-2015秋】 Strawberry Mint Chocolate 【XFD】" target="_blank" style={{color: '#cccccc', textDecoration: 'none'}}>【M3-2015秋】 Strawberry Mint Chocolate 【XFD】</a></div>
                       </p>
