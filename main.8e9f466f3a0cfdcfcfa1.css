@@ -109,6 +109,11 @@ body {
   font-weight: 400;
 }
 
+.paragraph {
+  /* pタグのような下マージンを設定 */
+  margin-bottom: 1rem;
+}
+
 .page-background {
   display: inline-block;
   position: fixed;
