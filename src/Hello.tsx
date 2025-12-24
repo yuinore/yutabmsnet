@@ -130,6 +130,7 @@ function MainPage(): JSX.Element {
                   <div className="routing-container routing-container-root">
                     <h2>News</h2>
                     <News20251224 fullsize={true} permalink="/news/20251224" />
+                    <Footer title="News | Yu^ta's Laboratory" />
                   </div>
                 } />
                 <Route path="/" element={
