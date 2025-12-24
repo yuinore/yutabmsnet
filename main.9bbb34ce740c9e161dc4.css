@@ -321,6 +321,17 @@ img.profile-avatar {
   border-radius: 9999px;
 }
 
+a.clickable-thumbnail img {
+  width: auto;
+  height: 160px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+a.clickable-thumbnail:last-of-type img {
+  margin-right: 0px;
+}
+
 .routing-container {
   animation-duration: 3s;
   animation-timing-function: ease-in;
