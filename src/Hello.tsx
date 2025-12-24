@@ -11,6 +11,7 @@ import { Helmet } from "react-helmet";
 import "./Hello.css"
 import Footer from "./Footer"
 import MovieList from "./components/MovieList";
+import News20251224 from "./articles/news/News20251224";
 
 function Hello(): JSX.Element {
   return (
@@ -54,12 +55,15 @@ function MainPage(): JSX.Element {
     { text: "Movies", href: "/movies" },
     { text: "Secret"  , href: "/secret" },
   ];
+  const nonMenuPages = [
+    { text: "News", href: "/news/20251224" },
+  ]
 
   return (
     <div className="page-container">
       <Routes location={location}>
         {
-          menuItems.map((menuItem, i) => {
+          [...menuItems, ...nonMenuPages].map((menuItem, i) => {
             return (
               <Route path={menuItem.href} key={i} element={
                 <Helmet
@@ -122,9 +126,16 @@ function MainPage(): JSX.Element {
           <TransitionGroup component={null}>
             <CSSTransition key={location.key} classNames="fade" timeout={500}>
               <Routes location={location}>
+                <Route path="/news/20251224" element={
+                  <div className="routing-container routing-container-root">
+                    <h2>News</h2>
+                    <News20251224 fullsize={true} permalink="/news/20251224" />
+                  </div>
+                } />
                 <Route path="/" element={
                   <div className="routing-container routing-container-root">
                     <h2>What's new?</h2>
+                    <News20251224 fullsize={false} permalink="/news/20251224" />
                     <h3>2025/8/28 更新</h3>
                     <div className="paragraph">C107 に申し込みを行いました。当選したらオリジナル曲のピアノ楽譜を頒布する予定です。</div>
                     <div className="paragraph">
