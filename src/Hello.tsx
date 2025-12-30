@@ -12,6 +12,7 @@ import "./Hello.css"
 import Footer from "./Footer"
 import MovieList from "./components/MovieList";
 import News20251224 from "./articles/news/News20251224";
+import News20251231 from "./articles/news/News20251231";
 
 function Hello(): JSX.Element {
   return (
@@ -57,6 +58,7 @@ function MainPage(): JSX.Element {
   ];
   const nonMenuPages = [
     { text: "News", href: "/news/20251224" },
+    { text: "News", href: "/news/20251231" },
   ]
 
   return (
@@ -133,9 +135,17 @@ function MainPage(): JSX.Element {
                     <Footer title="News | Yu^ta's Laboratory" />
                   </div>
                 } />
+                <Route path="/news/20251231" element={
+                  <div className="routing-container routing-container-root">
+                    <h2>News</h2>
+                    <News20251231 fullsize={true} permalink="/news/20251231" />
+                    <Footer title="News | Yu^ta's Laboratory" />
+                  </div>
+                } />
                 <Route path="/" element={
                   <div className="routing-container routing-container-root">
                     <h2>What's new?</h2>
+                    <News20251231 fullsize={false} permalink="/news/20251231" />
                     <News20251224 fullsize={false} permalink="/news/20251224" />
                     <h3>2025/8/28 更新</h3>
                     <div className="paragraph">C107 に申し込みを行いました。当選したらオリジナル曲のピアノ楽譜を頒布する予定です。</div>
