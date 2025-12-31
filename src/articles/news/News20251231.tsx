@@ -47,7 +47,7 @@ function News20251231(props: Props): JSX.Element {
           <iframe
             width='560'
             height='315'
-            src='https://www.youtube.com/embed/F01ZBQQynUY'
+            src='https://www.youtube.com/embed/uCqh3OUeoaA'
             title='YouTube video player'
             // frameBorder='0'
             style={{ border: 'none' }}
