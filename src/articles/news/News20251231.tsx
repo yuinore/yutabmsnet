@@ -38,6 +38,10 @@ function News20251231(props: Props): JSX.Element {
               <th>Another</th>
               <td>☆10</td>
             </tr>
+            <tr style={{ color: '#AA66CC' }}>
+              <th>Insane</th>
+              <td>★0 (NEW!)</td>
+            </tr>
           </table>
         </div>
         <div className='paragraph'>
@@ -62,6 +66,19 @@ function News20251231(props: Props): JSX.Element {
             target='_blank'
           >
             ダウンロード
+          </a>
+        </div>
+        <hr />
+        <div className='paragraph'>
+          2026/1/2 追記 : 発狂差分を追加しました。1 月 2 日
+          より前にダウンロードした方は、こちらから差分のみをダウンロードできます。
+        </div>
+        <div className='paragraph'>
+          <a
+            href='https://yuinore.moe/bms/__05_white_cocoa-ins.bms'
+            target='_blank'
+          >
+            ダウンロード (差分のみ)
           </a>
         </div>
       </div>
