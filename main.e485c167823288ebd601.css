@@ -332,6 +332,11 @@ a.clickable-thumbnail:last-of-type img {
   margin-right: 0px;
 }
 
+.text-show-more {
+  font-size: 0.85em;
+  opacity: 0.85;
+}
+
 .routing-container {
   animation-duration: 3s;
   animation-timing-function: ease-in;
