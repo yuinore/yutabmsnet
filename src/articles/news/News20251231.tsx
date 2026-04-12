@@ -94,8 +94,8 @@ function News20251231(props: Props): JSX.Element {
           <img src='/assets/images/white_cocoa_stagefile.png' />
         </NavLink>
         <div className='paragraph'>
-          <NavLink to={permalink} className='clickable-thumbnail'>
-            詳細を見る
+          <NavLink to={permalink} className='text-show-more'>
+            続きを見る
           </NavLink>
         </div>
       </div>
