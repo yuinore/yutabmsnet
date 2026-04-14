@@ -47,6 +47,9 @@ function News20260412(props: Props): JSX.Element {
           ※ 情報は制作中のものです。収録内容は変更になる可能性があります。
         </div>
         <div className='paragraph'>
+          ※ 現時点でダウンロード販売の予定はございません。ご注意ください。
+        </div>
+        <div className='paragraph'>
           <img src='/assets/images/hobak_jacket_768px.png' />
         </div>
       </div>
