@@ -194,6 +194,77 @@ function MainPage(): JSX.Element {
                   <div className="routing-container routing-container-root">
                     <h2>CDs</h2>
                     <div>
+                      <h3 id="the-blue-bird">The Blue Bird</h3>
+                      <div className="paragraph">
+                          <img src="/assets/images/hobak_jacket_768px.png" />
+                      </div>
+                      <div className='paragraph'>
+                        <iframe
+                          width='100%'
+                          height='166'
+                          style={{ border: 0 }}
+                          allow='autoplay'
+                          src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2307912116&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true'
+                        ></iframe>
+                        <div
+                          style={{
+                            fontSize: '10px',
+                            color: '#cccccc',
+                            lineBreak: 'anywhere',
+                            wordBreak: 'normal',
+                            overflow: 'hidden',
+                            whiteSpace: 'nowrap',
+                            textOverflow: 'ellipsis',
+                            fontFamily:
+                              'Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif',
+                            fontWeight: 100,
+                          }}
+                        >
+                          <a
+                            href='https://soundcloud.com/strawberry-mint-chocolate'
+                            title='Strawberry Mint Chocolate'
+                            target='_blank'
+                            style={{ color: '#cccccc', textDecoration: 'none' }}
+                          >
+                            Strawberry Mint Chocolate
+                          </a>{' '}
+                          ·{' '}
+                          <a
+                            href='https://soundcloud.com/strawberry-mint-chocolate/crossfade-m3-2026-t-08b'
+                            title='ﾎﾊﾞｷﾞ Crossfade 【M3-2026春 T-08b】'
+                            target='_blank'
+                            style={{ color: '#cccccc', textDecoration: 'none' }}
+                          >
+                            ﾎﾊﾞｷﾞ Crossfade 【M3-2026春 T-08b】
+                          </a>
+                        </div>
+                      </div>
+                      <div className="paragraph">￥500 @ M3-2026春 T-08b</div>
+                      <h4>Tracklist</h4>
+                      <div className='paragraph'>
+                        01. The Blue Bird
+                        <br />
+                        02. The Blue Bird (Reml cover)
+                        <br />
+                        03. The Blue Bird (instrumental)
+                        <br />
+                        04. The Blue Bird (off vocal)
+                        <br />
+                        05. The Blue Bird (Game Size)
+                        <br />
+                      </div>
+                      <h4>Bonus Tracks (Game Size)</h4>
+                      <div className='paragraph'>
+                        06. Sweets &hearts; (Reml & Suzuki Tsudumi cover)
+                        <br />
+                        07. In and Out
+                        <br />
+                        08. Proline
+                        <br />
+                      </div>
+                    </div>
+                    <hr />
+                    <div>
                       <h3 id="funny-fancy-fantasia">Funny Fancy Fantasia</h3>
                       <div className="paragraph">
                         <a href="https://hatoqne.booth.pm/items/6925860" target="_blank">
@@ -328,8 +399,17 @@ function MainPage(): JSX.Element {
                 <Route path="bms" element={
                   <div className="routing-container routing-container-root">
                     <h2>BMS</h2>
+                    <h3>幸せの青い鳥 BMS Package</h3>
+                    <div className="paragraph">
+                      <a href="https://gift.yutabms.net/" target="_blank">特設サイトを開く</a>
+                    </div>
+                    <h3>white * cocoa</h3>
+                    <div className="paragraph">
+                      <a href="/news/20251231">詳細を見る</a>
+                    </div>
+                    <h3>All BMS List</h3>
                     <div className="paragraph">Under Construction...</div>
-                    <h3>Links</h3>
+                    <h3>Download Links</h3>
                     <ul>
                       <li>
                         <a href="https://drive.google.com/drive/folders/1-4ueQ8IR-k3MMKM50OaRANoD_d-iXCK4?usp=sharing" target="_blank">Yu^ta's BMS Complete Drive</a>
@@ -339,6 +419,12 @@ function MainPage(): JSX.Element {
                       </li>
                       <li>
                         <a href="https://famousbms.web.fc2.com/" target="_blank">第λ回 自称超有名BMS作家が物申す！</a>
+                      </li>
+                    </ul>
+                    <h3>Related Links</h3>
+                    <ul>
+                      <li>
+                        <a href="https://bmssearch.net/artists/DVtBiSrDXKvMfO" target="_blank">Yu^ta | BMS SEARCH</a>
                       </li>
                     </ul>
                     <Footer title="BMS | Yu^ta's Laboratory" />
