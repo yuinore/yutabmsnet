@@ -405,7 +405,7 @@ function MainPage(): JSX.Element {
                     </div>
                     <h3>white * cocoa</h3>
                     <div className="paragraph">
-                      <a href="/news/20251231">詳細を見る</a>
+                      <NavLink to="/news/20251231">詳細を見る</NavLink>
                     </div>
                     <h3>All BMS List</h3>
                     <div className="paragraph">Under Construction...</div>
