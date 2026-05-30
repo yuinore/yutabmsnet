@@ -43,6 +43,48 @@ function News20260412(props: Props): JSX.Element {
           08. Proline
           <br />
         </div>
+        <h4>試聴 (2026/4/26 追記)</h4>
+        <div className='paragraph'>
+          <iframe
+            width='100%'
+            height='166'
+            style={{ border: 0 }}
+            allow='autoplay'
+            src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2307912116&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true'
+          ></iframe>
+          <div
+            style={{
+              fontSize: '10px',
+              color: '#cccccc',
+              lineBreak: 'anywhere',
+              wordBreak: 'normal',
+              overflow: 'hidden',
+              whiteSpace: 'nowrap',
+              textOverflow: 'ellipsis',
+              fontFamily:
+                'Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif',
+              fontWeight: 100,
+            }}
+          >
+            <a
+              href='https://soundcloud.com/strawberry-mint-chocolate'
+              title='Strawberry Mint Chocolate'
+              target='_blank'
+              style={{ color: '#cccccc', textDecoration: 'none' }}
+            >
+              Strawberry Mint Chocolate
+            </a>{' '}
+            ·{' '}
+            <a
+              href='https://soundcloud.com/strawberry-mint-chocolate/crossfade-m3-2026-t-08b'
+              title='ﾎﾊﾞｷﾞ Crossfade 【M3-2026春 T-08b】'
+              target='_blank'
+              style={{ color: '#cccccc', textDecoration: 'none' }}
+            >
+              ﾎﾊﾞｷﾞ Crossfade 【M3-2026春 T-08b】
+            </a>
+          </div>
+        </div>
         <div className='paragraph'>
           ※ 情報は制作中のものです。収録内容は変更になる可能性があります。
         </div>
