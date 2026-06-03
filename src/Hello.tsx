@@ -14,6 +14,7 @@ import MovieList from "./components/MovieList";
 import News20251224 from "./articles/news/News20251224";
 import News20251231 from "./articles/news/News20251231";
 import News20260412 from './articles/news/News20260412';
+import News20260603 from './articles/news/News20260603';
 
 function Hello(): JSX.Element {
   return (
@@ -61,6 +62,7 @@ function MainPage(): JSX.Element {
     { text: "News", href: "/news/20251224" },
     { text: "News", href: "/news/20251231" },
     { text: "News", href: "/news/20260412" },
+    { text: "News", href: "/news/20260603" },
   ]
 
   return (
@@ -151,9 +153,17 @@ function MainPage(): JSX.Element {
                     <Footer title="News | Yu^ta's Laboratory" />
                   </div>
                 } />
+                <Route path="/news/20260603" element={
+                  <div className="routing-container routing-container-root">
+                    <h2>News</h2>
+                    <News20260603 fullsize={true} permalink="/news/20260603" />
+                    <Footer title="News | Yu^ta's Laboratory" />
+                  </div>
+                } />
                 <Route path="/" element={
                   <div className="routing-container routing-container-root">
                     <h2>What's new?</h2>
+                    <News20260603 fullsize={false} permalink="/news/20260603" />
                     <News20260412 fullsize={false} permalink="/news/20260412" />
                     <News20251231 fullsize={false} permalink="/news/20251231" />
                     <News20251224 fullsize={false} permalink="/news/20251224" />
